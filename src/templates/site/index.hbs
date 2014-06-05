@@ -1,0 +1,37 @@
+<main id="sections" role="main">
+  <section id="main">
+    <div class="overlay">
+      <article id="masthead" class="container">
+        <div class="row">
+          <header class="col-md-4 col-md-offset-4">
+              <h2>Frontend Template</h2>
+          </header>
+        </div>
+        <div class="row">
+          <p class="col-md-4 col-md-offset-4">A frontend template that uses grunt to easily assemble static web-pages.</p>     
+        </div>
+      </article>
+    </div>
+  </section>
+  <section>
+    <article class="container">
+        <header>
+            <h2>More Information</h2>
+        </header>
+{{#markdown }}
+####My frontend template and static site generator.  
+* Concatenate JavaScript (usually just jQuery and bootstrap) files and minify them into build/js/script.min.js  
+* Process style.less file in to style.css  
+* Concatenate CSS files (Mostly Bootstrap and style.css) and minify them into build/css/style.min.css  
+* Take all images and optimise them (lossless compression) into build/img/*.jpg or png  
+* Use assemble to generate html pages and blog posts  
+
+#####Requires
+node and npm
+
+#####Usage
+run `npm install` for dependencies
+{{/markdown }}
+    </article>
+  </section>
+</main>
