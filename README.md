@@ -18,3 +18,7 @@ npm
 
 run `npm install` for dependencies
 
+## Todo
+
+* List of websites built using this template
+* Use LESS properly especially with regards to customizing variables
