@@ -13,7 +13,8 @@ module.exports = function(grunt) {
         dist: {
             src: [
                 'src/js/jquery.js', 
-                'src/js/bootstrap.js'
+                'src/js/bootstrap.js',
+                'src/js/grayscale.js',
             ],
             dest: 'src/js/script.js',
         }
@@ -39,6 +40,7 @@ module.exports = function(grunt) {
         src: [
           'src/css/bootstrap.css',
           'src/css/style.css',
+          // 'src/css/grayscale.css',
         ],
         dest: 'src/css/main.css'
       }
@@ -58,7 +60,7 @@ module.exports = function(grunt) {
         files: [{
           expand: true,                  
           cwd: 'src/',                   
-          src: ['**/*.{png,jpg,gif}'],        
+          src: ['**/*.{png,jpg,gif,svg}'],        
           dest: 'build/'                  
         }]
       }
@@ -66,7 +68,8 @@ module.exports = function(grunt) {
     assemble: {
       options: {
         layout: 'src/templates/layouts/base.hbs',
-        partials: 'src/templates/partials/*.hbs'
+        partials: 'src/templates/partials/*.hbs',
+        data: 'src/data/*.json',
       },
       site: {
         options: {
@@ -76,6 +79,25 @@ module.exports = function(grunt) {
         files: {
           'build': ['src/templates/site/*.hbs' ]
         }
+      }
+    },
+    aws: grunt.file.readJSON("credentials.json"),
+    s3: {
+      options: {
+        accessKeyId: "<%= aws.accessKeyId %>",
+        secretAccessKey: "<%= aws.secretAccessKey %>",
+        bucket: "www.tandartsgooi.nl",
+        region: 'us-west-2',
+        access: "public-read",
+        headers: {
+          // CacheControl: 604800
+          CacheControl: 86400
+        },
+        // cache: false
+      },
+      build: {
+        cwd: "build/",
+        src: "**"
       }
     }
   });
@@ -92,7 +114,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('assemble');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-aws');
 
-  grunt.registerTask('default', ['concat', 'uglify', 'less', 'concat_css', 'cssmin']);
+  grunt.registerTask('default', ['concat', 'uglify', 'less', 'concat_css', 'cssmin', 'imagemin', ]);
 
 };
