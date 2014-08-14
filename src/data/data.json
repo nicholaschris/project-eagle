@@ -1,0 +1,30 @@
+{
+    "name" : "Tandheelkundig Centrum 't Gooi",
+    "shortname" : "Tandarts 't Gooi",
+    "slogan" : "Bij ons bent u in goede handen.",
+    "behandel-open" : "07.30",
+    "behandel-close" : "16.30",
+    "reception-open" : "07.30",
+    "reception-close" : "14.00",
+    "street-address": "Roemer Visscherlaan 1",
+    "postalCode" : "1401 RE",
+    "locality" : "Bussum",
+    "tel" : "035 – 6913480",
+    "email" : "tandartsgooi@gmail.com",
+    "testimonials" : {
+        "first" : {
+            "name" : "Hans van Dam",
+            "source" : "Zorgkaart",
+            "quote" : "Met een paar behandelingen van mijn paro afgeholpen. Alles is snel en pijnloos gegaan. Fijn dat zo'n specialist zonder wachttijd te benaderen is.",
+            "treatment" : "Parodontitis behandeling",
+            "thumbnail" : "https://s3.amazonaws.com/uifaces/faces/twitter/tomaslau/128.jpg"
+        },
+        "second" : {
+            "name" : "Margriet Bakker",
+            "source" : "Zorgkaart",
+            "quote" : "Mooie praktijk, hele deskundige tandarts en medewerkers, altijd vriendelijk, stipt en netjes.",
+            "treatment" : "Mondhygiëne",
+            "thumbnail" : "https://s3.amazonaws.com/uifaces/faces/twitter/madysondesigns/128.jpg"
+        }
+    }
+}

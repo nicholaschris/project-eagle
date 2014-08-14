@@ -1,0 +1,1 @@
+Met een paar behandelingen van mijn paro afgeholpen. Alles is snel en pijnloos gegaan. Fijn dat zo'n specialist zonder wachttijd te benaderen is. - Hans van Dam (zorgkaart)
