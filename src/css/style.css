@@ -389,6 +389,9 @@ h1#brandname div {
   padding-top: 10px;
 }
 @media (max-width: 767px) {
+  #hero-section {
+    margin-top: 50px;
+  }
   #testimonials {
     font-weight: 100;
   }
@@ -423,4 +426,16 @@ h1#brandname div {
 }
 .treatment p {
   font-size: 16px;
+}
+h1#brandname {
+  font-size: 2.5em;
+  text-align: left;
+  margin-bottom: 10px;
+}
+p.intro-text {
+  font-size: 2em;
+  text-align: left;
+}
+.scroll-button {
+  margin-bottom: 10px;
 }

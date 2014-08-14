@@ -8,16 +8,18 @@ content: src/templates/markdown/welcome_tandartsgooi.md
         <div class="container">
             <div id="hero-section" class="row">
                 <div class="col-md-12">
-                    <div class="col-md-8 col-md-offset-0">
-                        <h1 id="brandname" class="intro-text" style="font-size:2.5em;text-align:left;margin-bottom:10px;">
+                    <div class="col-md-8">
+                        <h1 id="brandname" class="intro-text">
                             <div>Tand</div><div>heelkundig</div> <br>Centrum 't Gooi.
                         </h1>
-                        <p class="intro-text" style="font-size:2em;text-align:left">{{ slogan }}</p>
-                        <p class="page-scroll"><a href="#about" class="btn btn-default btn-lg" role="button">Maak een afspraak</a></p>
+                        <p class="intro-text">{{ slogan }}</p>
+                        <p class="page-scroll">
+                            <a href="#about" class="btn btn-default btn-lg" role="button">Maak een afspraak</a>
+                        </p>
                     </div>
                 </div>
                 <div class="col-md-12">
-                    <div class="opening-times col-md-4" style="font-size:0.5em">
+                    <div class="opening-times col-md-4">
                         <!-- <h3>Behandeltijden</h3> -->
                         <!-- <br> -->
                         <p>Maandag t/m vrijdag:</p>
@@ -28,16 +30,16 @@ content: src/templates/markdown/welcome_tandartsgooi.md
                         </p>
                         <!-- <br> -->
                         <p>Telefonisch afspraken maken:</p>
-                        <p><b>07.30 - 14.00</b> uur.</p>
+                        <p><b>{{ tel-open }} - {{ tel-close }}</b> uur.</p>
                         <br>
                         <!-- <br> -->
                         <div itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address">
                             <p> 
-                                <span itemprop="street-address">Roemer Visscherlaan 1</span>,<br>
-                                <span itemprop="postalCode">1401 RE</span>,
-                                <span itemprop="locality">Bussum</span>
+                                <span itemprop="street-address">{{ street-address }}</span>,<br>
+                                <span itemprop="postalCode">{{ postalCode }}</span>,
+                                <span itemprop="locality">{{ locality }}</span>
                             </p>
-                            <p><span><i class="fa fa-phone"></i> 035 – 6913480</span></p>
+                            <p><span><i class="fa fa-phone"></i> {{ tel }}</span></p>
                             <br>
                             <br>
                             <p class="page-scroll"><a href="#map-canvas">Op de kaart</a></p>
@@ -45,20 +47,20 @@ content: src/templates/markdown/welcome_tandartsgooi.md
                     </div>
                 </div>
             </div>
-            <div class="row text-center" style="margin-bottom:10px;">
-                    <div class="page-scroll">
-                        <a href="#about" class="btn btn-circle page-scroll">
-                            <i class="fa fa-angle-double-down animated"></i>
-                        </a>
-                    </div>
+            <div class="row text-center scroll-button">
+                <div class="page-scroll">
+                    <a href="#about" class="btn btn-circle page-scroll">
+                        <i class="fa fa-angle-double-down animated"></i>
+                    </a>
                 </div>
+            </div>
         </div>
     </div>
 </section>
 
 <section id="about" class="container content-section">
     <div class="row bordered">
-        <div class="col-lg-6 col-lg-offset-3">
+        <div class="col-xs-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
           {{md content }}
         </div>
     </div>
@@ -102,26 +104,3 @@ content: src/templates/markdown/welcome_tandartsgooi.md
         </div>
     </div>
 </section>
-
-<section id="contact" class="container content-section" style="display:none">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-            <h2>Maakt nu een afspraak</h2>
-            <p>
-                Bel ons nu om je afspraak te maak. Of als je wil kun je een e-mail sturen.
-            </p>
-            <p>035 – 6913480</p>
-            <p>afspraak@tandartsgooi.com</p>
-            <ul class="list-inline banner-social-buttons" style="display:none">
-                <li><a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                </li>
-                <li><a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                </li>
-                <li><a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</section>
-<script src="http://gardenstudio.com.br/js/vendor/snap.svg-min.js"></script>
-<script src="http://gardenstudio.com.br/js/vendor/inline-svg.js"></script>

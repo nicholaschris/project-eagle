@@ -1,4 +1,8 @@
-# My frontend template and static site generator.  
+# Project Info
+
+Built from frontend-template (v1)
+
+## My frontend template and static site generator.  
 
 * Concatenate JavaScript (usually just jQuery and bootstrap) files and minify them into build/js/script.min.js  
 * Process style.less file in to style.css  
@@ -20,5 +24,6 @@ run `npm install` for dependencies
 
 ## Todo
 
+* Abstract
 * List of websites built using this template
 * Use LESS properly especially with regards to customizing variables
